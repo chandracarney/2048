@@ -1,5 +1,10 @@
-module('It makes an array');
+module('It starts the game');
 
-test('gridArray') function(assert) {
-  assert.ok(gridArray([]), 'This grid is showing');
-};
+test('It makes an array.', function(assert) {
+  assert.deepEqual(newGame(), [
+    [ null, null, null, null ],
+    [ null, null, null, null ],
+    [ null, null, null, null ],
+    [ null, null, null, null ] ],
+    'It returned an array.');
+});
