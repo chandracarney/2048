@@ -16,5 +16,15 @@ test('Push adds elements of the same number', function(assert) {
 
   board.pushLeft();
 
-  assert.deepEqual(board.firstRow, [4, null, null, null], 'It moved!');
+  assert.deepEqual(board.firstRow, [4, null, null, null], 'It moved and added numbers!');
+});
+
+test('Push does not add elements of different numbers', function(assert) {
+  var board2 = new Board();
+  board2.addNumberToColumn(2, 1);
+  board2.addNumberToColumn(4, 3);
+
+  board2.pushLeft();
+
+  assert.deepEqual(board2.firstRow, [2, 4, null, null], 'It moved and did not add!');
 })
