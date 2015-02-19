@@ -3,7 +3,7 @@ module('It starts the game');
 test('It makes an array.', function(assert) {
   var board = new Board();
 
-  assert.deepEqual(board.firstRow, [ null, null, null, null ], 'It returned an array.');
+  assert.deepEqual(board.firstRow, [ null, null, null, null ], 'Array return.');
 });
 
 test('It can put one element.', function(assert) {

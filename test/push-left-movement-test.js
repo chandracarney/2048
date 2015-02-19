@@ -2,7 +2,7 @@ module('It moves numbers');
 
 test('It can push elements all the way to the left', function(assert) {
   var board = new Board();
-  board.addNumberToColumn(2, 3)
+  board.addNumberToColumn(2, 3);
 
   board.pushLeft();
 
@@ -11,12 +11,12 @@ test('It can push elements all the way to the left', function(assert) {
 
 test('Push adds elements of the same number', function(assert) {
   var board = new Board();
-  board.addNumberToColumn(2, 3)
-  board.addNumberToColumn(2, 1)
+  board.addNumberToColumn(2, 3);
+  board.addNumberToColumn(2, 1);
 
   board.pushLeft();
 
-  assert.deepEqual(board.firstRow, [4, null, null, null], 'It moved and added numbers!');
+  assert.deepEqual(board.firstRow, [4, null, null, null], 'Moved &added nums');
 });
 
 test('Push does not recursively add all numbers', function(assert) {
@@ -28,7 +28,7 @@ test('Push does not recursively add all numbers', function(assert) {
 
   board2.pushLeft();
 
-  assert.deepEqual(board2.firstRow, [4, 4, null, null], 'It moved and added sets.');
+  assert.deepEqual(board2.firstRow, [4, 4, null, null], 'Moved & added sets.');
 });
 
 test('Push does not add elements of different numbers', function(assert) {
@@ -38,7 +38,7 @@ test('Push does not add elements of different numbers', function(assert) {
 
   board2.pushLeft();
 
-  assert.deepEqual(board2.firstRow, [2, 4, null, null], 'It moved and did not add!');
+  assert.deepEqual(board2.firstRow, [2, 4, null, null], 'Moved & did not add');
 });
 
 test('Push does not add or move when numbers are all different.', function(assert) {
@@ -50,5 +50,5 @@ test('Push does not add or move when numbers are all different.', function(asser
 
   board2.pushLeft();
 
-  assert.deepEqual(board2.firstRow, [16, 8, 4, 2], 'It did not move and did not add!');
+  assert.deepEqual(board2.firstRow, [16, 8, 4, 2], 'Did not move & did not add');
 });
