@@ -41,7 +41,7 @@ test('Push does not add elements of different numbers', function(assert) {
   assert.deepEqual(board2.firstRow, [2, 4, null, null], 'Moved & did not add');
 });
 
-test('Push does not add or move when numbers are all different.', function(assert) {
+test('Does not add move when numbers are all different.', function(assert) {
   var board2 = new Board();
   board2.addNumberToColumn(16, 1);
   board2.addNumberToColumn(8, 2);
@@ -50,5 +50,5 @@ test('Push does not add or move when numbers are all different.', function(asser
 
   board2.pushLeft();
 
-  assert.deepEqual(board2.firstRow, [16, 8, 4, 2], 'Did not move & did not add');
+  assert.deepEqual(board2.firstRow, [16, 8, 4, 2], "Didn't move & didn't add");
 });
