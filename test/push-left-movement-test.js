@@ -1,4 +1,4 @@
-module('It moves numbers');
+module('It moves numbers left.');
 
 test('It can push elements all the way to the left', function(assert) {
   var board = new Board();
@@ -16,7 +16,7 @@ test('Push adds elements of the same number', function(assert) {
 
   board.pushLeft();
 
-  assert.deepEqual(board.firstRow, [4, null, null, null], 'Moved &added nums');
+  assert.deepEqual(board.firstRow, [4, null, null, null], 'Moved left');
 });
 
 test('Push does not recursively add all numbers', function(assert) {
